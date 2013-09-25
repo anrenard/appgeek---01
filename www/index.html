@@ -47,7 +47,20 @@
     ================================================== -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-  
 
+  <script>
+    // Show a custom alertDismissed
+    //
+    function showAlert() {
+        navigator.notification.alert(
+            'You are the winner!',  // message
+            alertDismissed,         // callback
+            'Game Over',            // title
+            'Done'                  // buttonName
+        );
+    }
+
+    </script>
+    
 </body>
 </html>
