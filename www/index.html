@@ -52,8 +52,15 @@
     // Show a custom alertDismissed
     //
     function alertDismissed() {
-        'Appuyez deux fois pour quitter'
+        
     }
+
+    navigator.notification.alert(
+    'You are the winner!',  // message
+    alertDismissed,         // callback
+    
+    'Done'                  // buttonName
+);
 
     </script>
      <p><a href="#" onclick="alertDismissed(); return false;">Show Alert</a></p>
