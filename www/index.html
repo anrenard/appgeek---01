@@ -132,6 +132,10 @@
         </script>
 
   <script>
+  function exitApp() {
+    console.log("Exiting app");
+    navigator.app.exitApp();
+}
  function onPressBack(e) {
     e.preventDefault();
     if(pageHistoryCount > 0) pageHistoryCount--;
