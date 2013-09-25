@@ -51,6 +51,7 @@ h1 {
 .blink {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
+    font-weight: bolder;
 }
 .bot{
     margin-top: 50px;
