@@ -51,16 +51,11 @@
   <script>
     // Show a custom alertDismissed
     //
-    function showAlert() {
-        navigator.notification.alert(
-            'You are the winner!',  // message
-            alertDismissed,         // callback
-            'Game Over',            // title
-            'Done'                  // buttonName
-        );
+    function alertDismissed() {
+        'Appuyez deux fois pour quitter'
     }
 
     </script>
-     <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
+     <p><a href="#" onclick="alertDismissed(); return false;">Show Alert</a></p>
 </body>
 </html>
