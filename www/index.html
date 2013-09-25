@@ -11,7 +11,7 @@
     </head>
     <body style="">
 
-    <div class="btn-primary navbar-fixed-top">
+    <div class="navbar navbar-fixed-bottom">
       <div class="container">
         <div class="navbar-header">
         <center>
@@ -31,7 +31,7 @@
       </div>
     </div>
 
-    <div class="navbar navbar-fixed-bottom">
+    <div class="navbar navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand blink"><span class="glyphicon glyphicon-chevron-right"></span>GeekPlayer</a>
@@ -127,36 +127,36 @@
             document.getElementById('audio_position').innerHTML = position;
         }
 
-        </script>
+    </script>
 
-  <script>
-  //Deviceready function
-  document.addEventListener('deviceready', function() {
+    <script>
+      //Deviceready function
+      document.addEventListener('deviceready', function() {
 
-    document.addEventListener("backbutton", ShowExitDialog, false);
+        document.addEventListener("backbutton", ShowExitDialog, false);
 
-}, false);
+    }, false);
 
-// Dialog box when back button is pressed
-  function ShowExitDialog() {
-        navigator.notification.confirm(
-                ("Voulez vous vraiment quitter?"), // message
-                alertexit, // callback
-                'GeekPlayer', // title
-                'YES,NO' // buttonName
-        );
+    // Dialog box when back button is pressed
+      function ShowExitDialog() {
+            navigator.notification.confirm(
+                    ("Voulez vous vraiment quitter?"), // message
+                    alertexit, // callback
+                    'GeekPlayer', // title
+                    'YES,NO' // buttonName
+            );
+
+        }
+    // Call exit function
+        function alertexit(button){
+
+            if(button=="1" || button==1)
+            {
+
+                device.exitApp();
+            }
 
     }
-// Call exit function
-    function alertexit(button){
-
-        if(button=="1" || button==1)
-        {
-
-            device.exitApp();
-        }
-
-}
 
     </script>
      
