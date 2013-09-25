@@ -154,9 +154,9 @@
 // Dialog box when back button is pressed
   function ShowExitDialog() {
         navigator.notification.confirm(
-                ("Do you want to Exit?"), // message
+                ("Voulez vous vraiment quitter?"), // message
                 alertexit, // callback
-                'My APp', // title
+                'Proutgeek', // title
                 'YES,NO' // buttonName
         );
 
@@ -164,7 +164,7 @@
 // Call exit function
     function alertexit(button){
 
-        if(button=="1" || button==1)
+        if(button=="2" || button==2)
         {
 
             device.exitApp();
