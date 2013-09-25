@@ -30,10 +30,12 @@
       <hr>
     </div> <!-- /container -->
 
-
-    <a href="#" class="btn large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Play Audio</a>
-        <a href="#" class="btn large" onclick="pauseAudio();">Pause Playing Audio</a>
-        <a href="#" class="btn large" onclick="stopAudio();">Stop Playing Audio</a>
+        <div class="btn-group">
+          <button type="button" class="btn btn-default" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Play</button>
+          <button type="button" class="btn btn-default" onclick="pauseAudio();">Pause</button>
+          <button type="button" class="btn btn-default" onclick="stopAudio();">Stop</button>
+        </div>
+        
         <p id="audio_position"></p>
 
     <!-- Bootstrap core JavaScript
