@@ -35,7 +35,19 @@
           <button type="button" class="btn btn-default" onclick="pauseAudio();">Pause</button>
           <button type="button" class="btn btn-default" onclick="stopAudio();">Stop</button>
         </div>
-        
+
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-primary">
+            <input type="radio" name="options" id="option1" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');"> Play
+          </label>
+          <label class="btn btn-primary">
+            <input type="radio" name="options" id="option2" onclick="pauseAudio();"> Pause
+          </label>
+          <label class="btn btn-primary">
+            <input type="radio" name="options" id="option3" onclick="stopAudio();"> Stop
+          </label>
+        </div>
+
         <p id="audio_position"></p>
 
     <!-- Bootstrap core JavaScript
