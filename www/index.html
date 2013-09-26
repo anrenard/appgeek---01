@@ -36,11 +36,7 @@
     </div>
 
     <div id="feedwall" class="list-group dwn">
-      <a href="#" class="list-group-item active">
-        Cras justo odio
-      </a>
-      <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-      <a href="#" class="list-group-item">Morbi leo risus</a>
+      
     </div>
 
      <!-- Button trigger modal -->
@@ -68,7 +64,6 @@
   
     <!-- Bootstrap core JavaScript
     ================================================== -->
-    <script src="js/cordova.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
@@ -86,15 +81,15 @@
               dataType: 'json',                //data format      
               success: function(data)          //on recieve of reply
               {
-                   console.log(data);
-                   var name;
+                console.log(data);
+                var nom;
                 //--------------------------------------------------------------------------------------
                 // 3) Update html content
                 //--------------------------------------------------------------------------------------
                 for (var i=0;i<data.length;i++){
-                   name = data[i];
-                   console.log(id);
-                   re+= "<a href='#' class='list-group-item'>"+name+"</a>"; 
+                   nom = data[i].name;
+                   console.log(nom);
+                   re+= "<a href='#' class='list-group-item'>"+nom+"</a>"; 
                 }
                 $('#feedwall').html(re);
 
