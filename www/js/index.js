@@ -29,5 +29,3 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
-
-$('#myModal').modal(show);
