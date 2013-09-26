@@ -63,7 +63,7 @@ h1 {
 }
 
 
-.modal {
+#myModal {
 position:fixed;
 top:50%;
 left:50%;
