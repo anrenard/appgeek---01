@@ -35,7 +35,7 @@
         </div><!--/.navbar-collapse -->
     </div>
 
-    <div class="list-group dwn">
+    <div id="feedwall" class="list-group dwn">
       <a href="#" class="list-group-item active">
         Cras justo odio
       </a>
@@ -71,6 +71,40 @@
     <script src="js/cordova.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <script id="source" language="javascript" type="text/javascript">
+
+          $(function () 
+          {
+
+            //-------------------------------------------------------------------------------------------
+            // 2) Send a http request with AJAX http://api.jquery.com/jQuery.ajax/
+            //-------------------------------------------------------------------------------------------
+            $.ajax({                                      
+              url: 'http://c2ol.fr/playergeek/webservice.php',    //the script to call to get data          
+              data: "",                        //you can insert url argumnets here to pass to api.php for example "id=5&parent=6"
+              dataType: 'json',                //data format      
+              success: function(data)          //on recieve of reply
+              {
+                   console.log(data);
+                   var name;
+                //--------------------------------------------------------------------------------------
+                // 3) Update html content
+                //--------------------------------------------------------------------------------------
+                for (var i=0;i<data.length;i++){
+                   name = data[i];
+                   console.log(id);
+                   re+= "<a href='#' class='list-group-item'>"+name+"</a>"; 
+                }
+                $('#feedwall').html(re);
+
+                //Set output element html
+                //recommend reading up on jquery selectors they are awesome http://api.jquery.com/category/selectors/
+              } 
+            });
+
+          }); 
+    </script>
 
     <!-- Player -->
     <script type="text/javascript" charset="utf-8">
